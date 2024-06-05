@@ -1,0 +1,21 @@
+Objetivo
+Practicar el concepto de Clases y Objetos.
+
+Consigna
+*con la siguiente estructura
+
+paquetes
+├── paquete_clinetes
+│   ├── modulos
+|   |   ├── cliente_premium.py
+│   |   └── cliente.py
+|   ├── main.py
+├── __init__.py
+└── setup.py
+
+
+*Crear un programa que permita el modelamiento de Clientes en una página de compras. Se debe utilizar el concepto de Programación Orientada a Objetos.
+*Se evaluará el uso correcto de atributos y métodos.
+*La Clase Cliente debe tener mínimo 4 atributos y 2 métodos.
+*Se debe utilizar el método __str__() para darle nombre a los objetos.
+*crear el paquete distribuible.
