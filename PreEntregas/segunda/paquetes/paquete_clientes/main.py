@@ -1,5 +1,5 @@
-from paquetes.paquete_clientes.modulos.cliente import Cliente
-from paquetes.paquete_clientes.modulos.cliente_plus import ClientePlus
+from paquetes.modulos.cliente import Cliente
+from paquetes.modulos.cliente_plus import ClientePlus
 
 def crear_cliente(nombre, apellido, email, direccion, es_premium=False, puntos_acumulados=0):
 
