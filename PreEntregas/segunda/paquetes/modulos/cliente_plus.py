@@ -1,4 +1,4 @@
-from paquetes.paquete_clientes.modulos.cliente import Cliente
+from modulos.cliente import Cliente
 
 class ClientePlus(Cliente):
     def __init__(self, nombre: str, apellido: str, correo_electronico: str, direccion: str, descuento: float):
