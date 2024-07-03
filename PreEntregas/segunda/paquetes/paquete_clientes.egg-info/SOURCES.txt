@@ -1,8 +1,0 @@
-setup.py
-modulos/cliente.py
-modulos/cliente_plus.py
-paquete_clientes/main.py
-paquete_clientes.egg-info/PKG-INFO
-paquete_clientes.egg-info/SOURCES.txt
-paquete_clientes.egg-info/dependency_links.txt
-paquete_clientes.egg-info/top_level.txt
