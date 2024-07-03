@@ -9,7 +9,7 @@ Desarrollado por Werjman Matias tercera pre-entrega de proyecto.
 ### 1. En la terminal, dirigirse a una carpeta donde se desea clonar el proyecto y escribir y ejecutar:
 
 ```terminal
-git clone https://github.com/matiasjaw80/.git
+git clone (https://github.com/matiasjaw80/python.git)
 ```
 
 ### 2. Abrir el directorio donde se encuentra clonado el repositorio:
