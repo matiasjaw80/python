@@ -3,13 +3,15 @@
 Desarrollado por Werjman Matias tercera pre-entrega de proyecto.
 
 ## imagen1
+![imagen1](https://github.com/matiasjaw80/python/assets/139645562/73262ba2-ecb6-46a1-a8c9-161448db4032)
+
 
 ## Instrucciones para Inicializar el proyecto:
 
 ### 1. En la terminal, dirigirse a una carpeta donde se desea clonar el proyecto y escribir y ejecutar:
 
 ```terminal
-git clone (https://github.com/matiasjaw80/python.git)
+git clone https://github.com/matiasjaw80/python.git
 ```
 
 ### 2. Abrir el directorio donde se encuentra clonado el repositorio:
@@ -51,6 +53,7 @@ python manage.py runserver
 1. Dirigirse al url http://127.0.0.1:8000/admin/
 
 ### imagen2
+![imagen2](https://github.com/matiasjaw80/python/assets/139645562/7e822f33-045e-48ce-b0c3-5ca0beb2f449)
 
 2. introducir las credenciales:
 
