@@ -16,25 +16,28 @@ from django.db import IntegrityError
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 
+@login_required
 def inicio(self):
     lista_cursos = Curso.objects.all()
     return render(self, "inicio.html", {"cursos": lista_cursos})
 
+@login_required
 def profesores(self):
     lista_profesores = Profesor.objects.all()
     return render(self, "profesores.html", {"profesores": lista_profesores})
 
-
+@login_required
 def estudiante(self):
     lista_estudiantes = Estudiante.objects.all()
     return render(self, "estudiantes.html", {"estudiantes": lista_estudiantes})
 
-
+@login_required
 def entregables(self):
     lista_entregables = Entregable.objects.all()
 
     return render(self, "entregables.html", {"entregables": lista_entregables})
 
+@login_required
 def cursos(self):
     lista_cursos = Curso.objects.all()
     return render(self, "cursos.html", {"cursos": lista_cursos})
@@ -59,6 +62,7 @@ def cursoFormulario(request):
         miFormulario = CursoFormulario()
         return render(request, "cursoFormulario.html", {"miFormulario": miFormulario})
 
+@login_required
 def editarCurso(request, id):
     Curso = Curso.objects.get(id=id)
     if request.method == 'POST':
@@ -84,7 +88,7 @@ def editarCurso(request, id):
         })
         return render(request, "editarCurso.html", {"miFormulario": miFormulario, "id": cursos.id})
 
-
+@login_required
 def estudianteFormulario(request):
     if request.method == 'POST':
         miFormulario = EstudianteFormulario(request.POST)
@@ -104,7 +108,7 @@ def estudianteFormulario(request):
         miFormulario = EstudianteFormulario()
         return render(request, "estudianteFormulario.html", {"miFormulario": miFormulario})
 
-
+@login_required
 def eliminarEstudiante(request, id):
     if request.method == 'POST':
         estudiante = Estudiante.objects.get(id=id)
@@ -112,6 +116,7 @@ def eliminarEstudiante(request, id):
         lista_estudiantes = estudiante.objects.all()
         return render(request, 'estudiantes.html', {"estudiantes": lista_estudiantes})
 
+@login_required
 def editarEstudiante(request, id):
     estudiante = Estudiante.objects.get(id=id)
     if request.method == 'POST':
@@ -135,7 +140,7 @@ def editarEstudiante(request, id):
         })
         return render(request, "editarEstudiante.html", {"miFormulario": miFormulario, "id": estudiante.id})
 
-
+@login_required
 def profesorFormulario(request):
     if request.method == 'POST':
         miFormulario = ProfesorFormulario(request.POST)
@@ -154,7 +159,7 @@ def profesorFormulario(request):
         miFormulario = ProfesorFormulario()
         return render(request, "profesorFormulario.html", {"miFormulario": miFormulario})
 
-
+@login_required
 def eliminarProfesor(request, id):
     if request.method == 'POST':
         profesor = Profesor.objects.get(id=id)
@@ -162,7 +167,7 @@ def eliminarProfesor(request, id):
         lista_profesores = Profesor.objects.all()
         return render(request, 'profesores.html', {"profesores": lista_profesores})
 
-
+@login_required
 def editarProfesor(request, id):
     profesor = Profesor.objects.get(id=id)
     if request.method == 'POST':
@@ -188,7 +193,7 @@ def editarProfesor(request, id):
         })
         return render(request, "editarProfesor.html", {"miFormulario": miFormulario, "id": profesor.id})
 
-
+@login_required
 def entregableFormulario(request):
     if request.method == 'POST':
         miFormulario = EntregableFormulario(request.POST)
@@ -206,6 +211,7 @@ def entregableFormulario(request):
         miFormulario = EntregableFormulario()
         return render(request, "entregableFormulario.html", {"miFormulario": miFormulario})
 
+@login_required
 def editarEntregable(request, id):
     Entregable = Entregable.objects.get(id=id)
     if request.method == 'POST':
@@ -229,7 +235,7 @@ def editarEntregable(request, id):
         })
         return render(request, "editarCurso.html", {"miFormulario": miFormulario, "id": cursos.id})
 
-
+@login_required
 def eliminarEntregable(request, id):
     if request.method == 'POST':
         profesor = Profesor.objects.get(id=id)
@@ -245,6 +251,7 @@ def eliminarEntregable(request, id):
 
 #___Busqueda
 
+@login_required
 def buscar(request):
     if request.GET['nombre']:
         nombre = request.GET['nombre']
@@ -252,6 +259,7 @@ def buscar(request):
         print(curso)
         return render(request, 'busquedaComision.html', {"cursos": curso})
 
+@login_required
 def busquedaComision(request):
     return render(request, 'busquedaComision.html')
 
@@ -429,8 +437,10 @@ def user_signup(request):
 
 def user_logout(request):
     logout(request)
-    return redirect('Inicio')
+    return render(request, "userLogout.html")
 
 
 def about(request):
     return render(request, "about.html")
+
+

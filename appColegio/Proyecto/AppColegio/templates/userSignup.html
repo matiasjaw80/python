@@ -12,7 +12,7 @@
 
             <div class="alert alert-dismissible alert-danger">
                 <strong>Ups!</strong> El nombre de usuario ya se encuentra registrado, prueba con otro =)
-                <button type="button" class="btn-close" data-bs-dismiss="alert">x</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="alert">x</button>
             </div>
             {% endif %}
 
@@ -20,14 +20,14 @@
 
             <div class="alert alert-dismissible alert-danger">
                 <strong>Ups!</strong> Las contraseñas no coinciden, por favor verificalas e intenta nuevamente.
-                <button type="button" class="btn-close" data-bs-dismiss="alert">x</button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="alert">x</button>
             </div>
             {% endif %}
             <form method="POST">
                 {% csrf_token %}
                 {{miFormulario.as_p}}
 
-                <button type="submit">Suscribirme</button>
+                <button type="submit" class="btn btn-success">Suscribirme</button>
             </form>
 
         </div>
