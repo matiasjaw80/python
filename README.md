@@ -59,3 +59,9 @@ python manage.py runserver
 
 -   nombre de usuario: **admin**
 -   clave: **admin123456**
+
+-   nombre de usuario: **supervisor**
+-   clave: **supervisor**
+
+-   nombre de usuario: **user**
+-   clave: **user**
