@@ -57,11 +57,14 @@ python manage.py runserver
 
 2. introducir las credenciales:
 
+### User Admin
 -   nombre de usuario: **admin**
 -   clave: **admin123456**
 
+### User supervisor
 -   nombre de usuario: **supervisor**
 -   clave: **supervisor**
 
+### User user
 -   nombre de usuario: **user**
 -   clave: **user**
